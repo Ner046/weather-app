@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.png">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="linear-gradient">
+
+    <main class="grid grid-center text-center">
+        <div class="container">
+            <h1 class="primary-header padding-block-400">Weather App</h1>
+
+
+            <form id="search-form" autocomplete="off">
+                <div class="search-container">
+                    <img src="images/misc-images/search.png" class="search-icon">
+                    <input type="text" placeholder="Search here" class="search-input" id="search-input">
+                </div>
+            </form>
+
+            <!-- Hidden class goes there -->
+             <div data-weather-card class="hidden"> 
+
+            <div class="padding-block-400 flex flex-col flex-justify">
+            <h2 class="country-header" data-weather-city></h2>
+            <img src="" data-weather-img class="">
+            </div>
+
+
+            <div class="button-form">
+            <button class="button-C fs-700 text-paragraph" data-unit-btn="C">°C</button>
+            <span class="fs-700">|</span>
+            <button class="button-F fs-700 text-paragraph" data-unit-btn="F">°F</button>
+            </div>
+
+
+
+            <p class="display-number padding-block-400" data-weather-temp></p>
+
+
+            <div class="weather-details | flex flex-justify gap-600">
+
+            <div class="flex flex-col flex-align flex-1 gap-200">
+            <h3>Humidity</h3>
+            <img src="images/weather-icons/humidity.png" width="50" height="50">
+            <span data-weather-humidity></span>
+            </div>
+
+            
+            <div class=" flex flex-col flex-align flex-1 gap-200">
+            <h3>Precipitation</h3>
+            <img src="images/weather-icons/drop.png" width="50" height="50">
+            <span data-weather-precipitation></span>
+            </div>
+
+            <div class="flex flex-col flex-align flex-1 gap-200">
+            <h3>Wind</h3>
+            <img src="/images/weather-icons/wind.png" width="50" height="50">
+            <span data-weather-wind></span>
+            </div>
+
+
+            </div>
+
+            </div>
+
+                
+
+        </div>
+
+    </main>
+    
+    
+    
+</body>
+</html>
