@@ -1,4 +1,4 @@
-# Weather-Ap
+# Weather-App
 Weather App designed by figma, the technologies that were used are html / css / js. Openweather API was used to fetch data
 
 ## Live Demo
