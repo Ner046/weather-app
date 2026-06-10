@@ -40,8 +40,10 @@ let ferTemp;
 searchForm.addEventListener('submit', async(e)=>{
     e.preventDefault();
 
+
     const query = searchInput.value.trim();
     if(!query) return;
+   
 
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${query}&appid=${API_KEY}`;
 
@@ -86,9 +88,13 @@ searchForm.addEventListener('submit', async(e)=>{
     weatherPrecipitation.textContent = `${rainChance}%`
     weatherWind.textContent = `${data.list[0].wind.speed} m/s`;
     weatherCard.classList.remove('hidden');
+
+    searchInput.value = "";
+
 })
 
-weatherC.addEventListener('click', (e)=>{
+    weatherC.addEventListener('click', (e)=>{
+        
     if (celTemp === undefined) return; 
 
     weatherC.classList.add('active')
@@ -99,7 +105,7 @@ weatherC.addEventListener('click', (e)=>{
     weatherTemp.textContent= `${celTemp}°C`;
     })
 
-     weatherF.addEventListener('click', (e)=>{
+    weatherF.addEventListener('click', (e)=>{
         
     if (ferTemp === undefined) return;
 
