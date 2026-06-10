@@ -13,8 +13,8 @@ const weatherHumidity = document.querySelector('[data-weather-humidity]');
 const weatherPrecipitation = document.querySelector('[data-weather-precipitation]');
 const weatherWind = document.querySelector('[data-weather-wind]');
 const weatherImg = document.querySelector('[data-weather-img]');
-const weatherC = document.querySelector('[data-unit-btn = C]');
-const weatherF = document.querySelector('[data-unit-btn = F]')
+const weatherC = document.querySelector('[data-unit-btn=C]');
+const weatherF = document.querySelector('[data-unit-btn=F]')
 
 
 
@@ -27,7 +27,8 @@ const weatherImages = {
     Snow: "images/weather-images/snowy.png",
     Mist: "images/weather-images/cloudy.png",
     Fog: "images/weather-images/cloudy.png",
-    Haze: "images/weather-images/cloudy.png"
+    Haze: "images/weather-images/cloudy.png",
+    Night: "images/weather-images/moon.png"
 };
 
 
@@ -68,6 +69,10 @@ searchForm.addEventListener('submit', async(e)=>{
     const mainCondition = data.list[0].weather[0].main;
 
     weatherImg.src = weatherImages[mainCondition] || "images/weather-images/cloudy.png";
+
+         if(data.list[0].sys.pod === "n" && mainCondition === "Clear"){
+            weatherImg.src = weatherImages.Night
+         }
 
     weatherC.classList.add('active');
     weatherF.classList.remove('active');
