@@ -13,6 +13,7 @@
 </head>
 
 <body class="linear-gradient">
+    
 
     <main class="grid grid-center text-center">
         <div class="container">
@@ -22,23 +23,26 @@
             <form id="search-form" autocomplete="off">
                 <div class="search-container">
                     <img src="images/misc-images/search.png" class="search-icon">
-                    <input type="text" placeholder="Search here" class="search-input" id="search-input">
+                    <input type="text" placeholder="Search country or city..." class="search-input" id="search-input">
                 </div>
             </form>
+
+            <p id="error-message" class="hidden text-error">City or country not found. Please try again!</p>
+            
 
             <!-- Hidden class goes there -->
              <div data-weather-card class="hidden"> 
 
             <div class="padding-block-400 flex flex-col flex-justify">
             <h2 class="country-header" data-weather-city></h2>
-            <img src="" data-weather-img class="">
+            <img src="" data-weather-img class="weather-img">
             </div>
 
 
             <div class="button-form">
-            <button class="button-C fs-700 text-paragraph" data-unit-btn="C">°C</button>
+            <button class="button-C fs-700 text-paragraph active" data-unit-btn="C">°C</button>
             <span class="fs-700">|</span>
-            <button class="button-F fs-700 text-paragraph" data-unit-btn="F">°F</button>
+            <button class="button-F fs-700 text-paragraph opacity-50" data-unit-btn="F">°F</button>
             </div>
 
 
