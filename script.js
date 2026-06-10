@@ -1,4 +1,3 @@
-const API_KEY = '22039a984b3a11087b041c898fbe563d';
 
 
 const searchForm = document.getElementById('search-form');
@@ -94,7 +93,7 @@ searchForm.addEventListener('submit', async(e)=>{
 })
 
     weatherC.addEventListener('click', (e)=>{
-        
+
     if (celTemp === undefined) return; 
 
     weatherC.classList.add('active')
