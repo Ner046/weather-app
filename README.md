@@ -2,7 +2,7 @@
 Weather App designed by figma, the technologies that were used are html / css / js. Openweather API was used to fetch data
 
 ## Live Demo
-[View Live Demo] ()
+[View Live Demo] (https://ner046.github.io/weather-app/)
 
 ## Screenshots
 - Desktop Design
